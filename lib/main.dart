@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:migouabo/category_pages/category.dart';
 import 'home_pages/home.dart';
 import 'category_pages/category.dart';
+import 'comptes_pages/compte.dart';
 
 void main() {
   runApp(MyApp());
@@ -39,10 +40,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       'Index 3: School',
       style: optionStyle,
     ),
-    Text(
-      'Index 4: Business',
-      style: optionStyle,
-    ),
+   Compte(),
     Text(
       'Index 5: School',
       style: optionStyle,
@@ -59,7 +57,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-
         title: Bar,
       ),
       body: Center(
@@ -98,36 +95,26 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 }
 
 Widget Bar = Row(
+  //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+  crossAxisAlignment: CrossAxisAlignment.end,
   children: [
-    Container(
-      width: 40,
-      height: 40,
-      margin: EdgeInsets.only(right: 20),
-      decoration: BoxDecoration(
-        color:Colors.green[200],
-        image: DecorationImage(
-          image: AssetImage("assets/logo/logo.png"),
-          fit: BoxFit.fill,
+  Expanded(
+    child: Container(
+      width: double.infinity,
+      height: 50,
+      child:TextField(
+        decoration: InputDecoration(
+          filled: true,
+          fillColor: Colors.white,
+          border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(10)
+          ),
+          hintText: "rechercher un produit ...",
+          prefixIcon: Icon(Icons.search),
         ),
-        borderRadius: BorderRadius.circular(50),
       ),
-
-
     ),
-
-Expanded(
-child: TextField(
-decoration: InputDecoration(
-  filled: true,
-  fillColor: Colors.white,
-border: OutlineInputBorder(
-  borderRadius: BorderRadius.circular(10)
-),
-hintText: "rechercher un produit ...",
-  prefixIcon: Icon(Icons.search),
-),
-),
-),
+  ),
 IconButton(
   icon: Icon(
   Icons.shopping_cart,

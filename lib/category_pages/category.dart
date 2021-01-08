@@ -19,7 +19,7 @@ class _CategorysState extends State<Categorys> {
 
     final menu = Container(
         color: theme.canvasColor,
-        width: 300,
+        width: 100,
         child: SafeArea(
             right: false,
             child: Drawer(
@@ -28,7 +28,11 @@ class _CategorysState extends State<Categorys> {
                 children: <Widget>[
                   for (final s in routes)
                     ListTile(
-                      title: Text(s),
+                      title: Text(s,
+                        style: TextStyle(
+                          fontSize: 12,
+                        ),
+                      ),
                       onTap: () {
                         // Using navigator key, because the widget is above nested navigator
                         navigatorKey.currentState.pushNamedAndRemoveUntil(s, (r) => false);

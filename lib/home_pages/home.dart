@@ -246,12 +246,12 @@ class CategorysSections extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 400,
+      height: 300,
       margin: EdgeInsets.only(bottom: 20),
 
       decoration: BoxDecoration(
         color: Colors.grey,
-        borderRadius: BorderRadius.only(topRight: Radius.circular(20),topLeft: Radius.circular(20)),
+        borderRadius: BorderRadius.only(topRight: Radius.circular(10),topLeft: Radius.circular(10)),
 
       ),
       child: Column(
@@ -263,7 +263,7 @@ class CategorysSections extends StatelessWidget {
             padding: EdgeInsets.all(10),
             decoration: BoxDecoration(
               color: Colors.greenAccent,
-              borderRadius: BorderRadius.only(topRight: Radius.circular(20),topLeft: Radius.circular(20)),
+              borderRadius: BorderRadius.only(topRight: Radius.circular(10),topLeft: Radius.circular(10)),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
