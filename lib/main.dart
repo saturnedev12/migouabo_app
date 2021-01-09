@@ -3,6 +3,7 @@ import 'package:migouabo/category_pages/category.dart';
 import 'home_pages/home.dart';
 import 'category_pages/category.dart';
 import 'comptes_pages/compte.dart';
+import 'blog_pages/blog.dart';
 
 void main() {
   runApp(MyApp());
@@ -36,10 +37,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   static List<Widget> _widgetOptions = <Widget>[
    Home(),
    Categorys(),
-    Text(
-      'Index 3: School',
-      style: optionStyle,
-    ),
+   Blog(),
    Compte(),
     Text(
       'Index 5: School',

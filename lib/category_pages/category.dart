@@ -5,7 +5,7 @@ class Categorys extends StatefulWidget {
 }
 
 class _CategorysState extends State<Categorys> {
-  final routes = List.generate(20, (i) => 'test $i');
+  final routes = List.generate(20, (i) => 'catégorie $i');
 
   final navigatorKey = GlobalKey<NavigatorState>();
 
